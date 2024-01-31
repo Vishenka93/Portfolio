@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Arsenal:regular,italic,700,700italic"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Portfolio</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="header">
+                <div class="header__container">
+                    <span class="header__logo">Anton Vishneuski</span>
+                    <nav class="header__menu">
+                        <ul class="header__list">
+                            <li class="header__item">
+                                <a href="" class="header__link">Home</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="" class="header__link">About me</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="" class="header__link">Skills</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="" class="header__link">Works</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="" class="header__link">Contacts</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <main class="page">
+                <section class="page__main main">
+                    <div class="main__container">
+                        <div class="main__content">
+                            <p class="main__subtitle">
+                                Welcome to my Portfolio
+                            </p>
+                            <h1 class="main__title">
+                                Hi! I`m Anton Front-end Developer
+                            </h1>
+                            <p class="main__text">
+                                I`m goal-oriented proactive Junior Web Developer
+                                who wants to fulfill their potential and
+                                contribute their knowledge to the company. I had
+                                to change my profession as I need to grow in my
+                                skills and abilities.
+                            </p>
+                        </div>
+                        <div class="main__image">
+                            <img src="img/main/01.jpg" alt="image" />
+                        </div>
+                    </div>
+                </section>
+                <section class="page__skills skills">
+                    <div class="skills__container">
+                        <h2 class="skills__title">My skills</h2>
+                        <ul class="skills__list">
+                            <li class="skills__item">HTML</li>
+                            <li class="skills__item">CSS</li>
+                            <li class="skills__item">SASS</li>
+                            <li class="skills__item">JavaScript</li>
+                            <li class="skills__item">Git</li>
+                            <li class="skills__item">GitHub</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="page__works works">
+                    <div class="works__container">
+                        <h2 class="works__title">Works</h2>
+                        <div class="works__tab tabs">
+                            <div class="tabs__navigation">
+                                <button class="tabs-tab" data-name="all">
+                                    All
+                                </button>
+                                <button class="tabs-tab" data-name="javascript">
+                                    JavaScript
+                                </button>
+                                <button class="tabs-tab" data-name="htmlcss">
+                                    Html+Css
+                                </button>
+                            </div>
+                            <div class="tab__content">
+                                <!-- Slider main container -->
+                                <div class="content-swiper swiper">
+                                    <!-- Additional required wrapper -->
+                                    <div
+                                        class="content-swiper__wrapper swiper-wrapper"
+                                    >
+                                        <!-- Slides -->
+                                        <div
+                                            class="content-swiper__slide swiper-slide"
+                                            data-name="htmlcss"
+                                        >
+                                            <img
+                                                src="img/works/deephtmlcss.jpg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div
+                                            class="content-swiper__slide swiper-slide"
+                                            data-name="htmlcss"
+                                        >
+                                            htmlcss
+                                        </div>
+                                        <div
+                                            class="content-swiper__slide swiper-slide"
+                                            data-name="htmlcss"
+                                        >
+                                            <img
+                                                src="img/works/dsehtmlcss.jpg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div
+                                            class="content-swiper__slide swiper-slide"
+                                            data-name="javascript"
+                                        >
+                                            javascript
+                                        </div>
+                                        <div
+                                        class="content-swiper__slide swiper-slide"
+                                        data-name="javascript"
+                                    >
+                                        javascript
+                                    </div>
+                                    </div>
+
+                                    <!-- If we need pagination -->
+                                    <div class="swiper-pagination"></div>
+
+                                    <!-- If we need navigation buttons -->
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+
+                                    <!-- If we need scrollbar -->
+                                    <div class="swiper-scrollbar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer class="footer">3</footer>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

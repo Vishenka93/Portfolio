@@ -1,0 +1,284 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+body {
+    line-height: 1;
+    font-family: "Lato";
+    color: #ffffff;
+
+    font-size: 18px;
+    background-color: grey;
+}
+
+body._lock {
+    overflow: hidden;
+}
+
+[class*="__container"] {
+    max-width: 1420px;
+    margin: 0 auto;
+    padding: 0px 15px;
+    box-sizing: content-box;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+}
+.page {
+    flex: 1 1 auto;
+}
+
+/*                                   HEADER                                   */
+
+.header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    padding: 40px 0;
+    background-color: grey;
+}
+.header__container {
+    display: flex;
+    justify-content: space-between;
+}
+.header__logo {
+    font-weight: 700;
+    font-size: 20px;
+}
+.header__menu {
+    padding-right: 40px;
+}
+.header__list {
+    display: flex;
+}
+.header__item {
+}
+.header__item:not(:last-child) {
+    margin-right: 40px;
+}
+.header__link {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/*                           MAIN                                        */
+
+.page__main {
+}
+.main {
+    padding-top: 120px;
+    min-height: 100vh;
+}
+.main__container {
+    background-color: rgb(95, 95, 95);
+    border-radius: 50px;
+    display: flex;
+}
+.main__content {
+    flex: 0 1 50%;
+    padding: 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+.main__subtitle {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    width: 170px;
+}
+.main__title {
+    font-size: 28px;
+    font-weight: 700;
+    display: flex;
+    margin-bottom: 10px;
+    max-width: 400px;
+}
+.main__text {
+    max-width: 400px;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 120%;
+}
+.main__image {
+    flex: 0 1 50%;
+    position: relative;
+    max-width: 500px;
+    padding-bottom: 36%;
+    margin: 0 auto;
+}
+.main__image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 20px 10px;
+    border-radius: 50%;
+}
+
+/*                                     skills                         */
+
+.skills {
+    min-height: 100vh;
+}
+.skills__container {
+    background-color: rgb(95, 95, 95);
+    border-radius: 50px;
+    padding: 40px 10px;
+    display: flex;
+    flex-direction: column;
+}
+.skills__title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.skills__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.skills__item {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    width: 110px;
+}
+
+.skills__item:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+/*                  WORKS                           */
+
+.works {
+    padding: 40px 0;
+}
+.works__container {
+    padding: 40px 0;
+    background-color: rgb(95, 95, 95);
+    border-radius: 50px;
+}
+.works__title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+.works__tab {
+}
+
+.tabs {
+    padding: 0 20px;
+}
+.tabs__navigation {
+    max-width: 350px;
+    padding: 20px 0;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.tabs-tab {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgb(95, 95, 95);
+}
+
+.tabs-tab:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+
+.tabs-tab:not(:last-child) {
+    margin-right: 20px;
+}
+.tabs-tab:first-child {
+    margin-left: 20px;
+}
+.all {
+}
+.javascript {
+}
+.htmlcss {
+}
+
+.tab__content {
+}
+.content-swiper {
+    max-height: 400px;
+    height: 100%;
+}
+.swiper {
+}
+.content-swiper__wrapper {
+}
+.swiper-wrapper {
+}
+.content-swiper__slide {
+    min-height: 400px;
+}
+.swiper-slide {
+}
+.swiper-pagination {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+.swiper-scrollbar {
+}
+
+.add {
+    background-color: red;
+}
