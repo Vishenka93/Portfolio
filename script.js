@@ -1,5 +1,6 @@
 const tabs = document.querySelectorAll(".tabs-tab");
 const contents = document.querySelectorAll(".swiper-slide");
+
 const swiper = new Swiper(".content-swiper", {
     // Optional parameters
 
@@ -8,18 +9,17 @@ const swiper = new Swiper(".content-swiper", {
     // If we need pagination
     pagination: {
         el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
     },
 
-    // Navigation arrows
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
+    // mousewheel: {
+    //     sensitivity: 1,
+    // },
 
-    // And if we need scrollbar
-    scrollbar: {
-        el: ".swiper-scrollbar",
-    },
+    slidesPerView: 3,
+    initialSlide: 0,
+    spaceBetween: 20,
 });
 
 const showContent = (tab) => {
@@ -49,4 +49,4 @@ const showContent = (tab) => {
     };
 });
 
-[...tabs][0].click();
+tabs[0].click();
