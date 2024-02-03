@@ -73,6 +73,29 @@ body._lock {
     letter-spacing: 7px;
     font-family: "Manrope";
     line-height: 24px;
+    color: #fda50f;
+}
+
+.button {
+    padding: 15px 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    color: grey;
+    /* max-width: 200px; */
+    align-self: start;
+    transition: all 0.3s ease 0s;
+}
+.button:hover {
+    background-color: #fda50f;
+    cursor: pointer;
+    color: #fff;
+}
+
+.grey {
+    background-color: grey;
+    color: #fff;
 }
 
 /*                                   HEADER                                   */
@@ -94,6 +117,7 @@ body._lock {
 .header__logo {
     font-weight: 700;
     font-size: 20px;
+    color: #fff;
 }
 .header__menu {
     padding-right: 40px;
@@ -107,17 +131,29 @@ body._lock {
     margin-right: 40px;
 }
 .header__link {
+    position: relative;
     font-weight: 700;
     font-size: 20px;
+    transition: width 0.3s ease 0s;
 }
 
-.header__button {
-    padding: 15px;
-    border-radius: 5px;
-    background-color: #fff;
-    font-weight: 500;
-    font-size: 16px;
-    color: grey;
+.header__link::after {
+    position: absolute;
+    content: "";
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #fda50f;
+    transition: width 0.3s ease 0s;
+}
+.header__link:hover {
+    color: #fda50f;
+    transition: width 0.3s ease 0s;
+}
+.header__link:hover:after {
+    width: 100%;
+    transition: width 0.3s ease 0s;
 }
 
 /*                           MAIN                                        */
@@ -142,19 +178,25 @@ body._lock {
     margin: 0 auto;
 }
 .main__subtitle {
-    border: 2px solid #fff;
-    border-radius: 5px;
-    padding: 5px;
+    font-size: 20px;
     margin-bottom: 10px;
-    font-size: 14px;
-    width: 170px;
+    font-family: "Manrope";
+    letter-spacing: 7px;
 }
 .main__title {
-    font-size: 28px;
+    font-size: 38px;
     font-weight: 700;
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     max-width: 400px;
+}
+.main__title span {
+    color: #fda50f;
+}
+
+.main__position {
+    font-size: 24px;
+    margin-bottom: 15px;
 }
 .main__text {
     max-width: 400px;
@@ -162,6 +204,10 @@ body._lock {
     font-weight: normal;
     letter-spacing: 1px;
     line-height: 120%;
+    margin-bottom: 15px;
+}
+
+.header__button {
 }
 .main__image {
     flex: 0 1 50%;
@@ -192,27 +238,88 @@ body._lock {
     padding: 40px 10px;
     display: flex;
     flex-direction: column;
+    min-height: 500px;
+    position: relative;
 }
+
 .skills__title {
     margin-bottom: 60px;
 }
 .skills__list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
 }
 .skills__item {
+    /* position: absolute; */
+}
+
+.item1 {
+    position: absolute;
+    left: 30%;
+    bottom: 20%;
+}
+.item2 {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+}
+.item4 {
+    position: absolute;
+    right: 25%;
+    bottom: 20%;
+}
+.item3 {
+    position: absolute;
+    left: 46%;
+    top: 18%;
+}
+.item5 {
+    position: absolute;
+    left: 39%;
+    top: 28%;
+}
+.item6 {
+    position: absolute;
+    left: 29%;
+    top: 28%;
+}
+.item7 {
+    position: absolute;
+    left: 29%;
+    top: 48%;
+}
+.item8 {
+    position: absolute;
+    right: 39%;
+    top: 28%;
+}
+.item9 {
+    position: absolute;
+    right: 19%;
+    top: 28%;
+}
+.item10 {
+    position: absolute;
+    right: 19%;
+    top: 48%;
+}
+
+.skills__img {
+    position: absolute;
+    bottom: 0;
+    transform: translate(20%, 0);
+    width: 70%;
+    height: 90%;
+}
+
+.skills__item span {
     border: 2px solid #fff;
     border-radius: 5px;
     padding: 5px;
     text-align: center;
     font-size: 20px;
     font-weight: 700;
-    width: 110px;
-}
-
-.skills__item:not(:last-child) {
-    margin-bottom: 30px;
+    min-width: 170px;
+    align-self: start;
 }
 
 /*                  WORKS                           */
@@ -222,7 +329,7 @@ body._lock {
     min-height: 100vh;
 }
 .works__container {
-    padding: 40px 0;
+    padding: 30px 0;
     background-color: rgb(95, 95, 95);
     border-radius: 50px;
 }
@@ -236,63 +343,53 @@ body._lock {
 
 .tabs {
     padding: 0 20px;
+    display: flex;
 }
 .tabs__navigation {
     max-width: 350px;
-    padding: 20px 0;
+    padding: 10px 10px;
     background-color: #fff;
     border-radius: 15px;
-    margin-bottom: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-self: start;
 }
 
 .tabs-tab {
-    padding: 20px;
-    border-radius: 5px;
-    background-color: rgb(95, 95, 95);
+    min-width: 100px;
+    margin-bottom: 5px;
 }
 
 .tabs-tab:hover {
-    background-color: grey;
-    cursor: pointer;
-}
-
-.tabs-tab:not(:last-child) {
-    margin-right: 20px;
-}
-.tabs-tab:first-child {
-    margin-left: 20px;
-}
-.all {
-}
-.javascript {
-}
-.htmlcss {
+    /* background-color: grey;
+    cursor: pointer; */
 }
 
 .tab__content {
 }
 .content-swiper {
-    /* max-height: 400px;
-    height: 100%; */
+    width: 100%;
 }
 .swiper {
     /* width: 600px;
     height: 300px; */
 }
 .content-swiper__wrapper {
-    margin-bottom: 20px;
 }
 .swiper-wrapper {
 }
 .content-swiper__slide {
-    max-height: 900px;
+    max-height: 500px;
     /* margin: 20px; */
     /* gap: 20px; */
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
 .content-swiper__block {
     min-height: 100%;
+    /* min-width: 100%; */
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -303,8 +400,9 @@ body._lock {
 }
 .content-swiper__image {
     overflow: hidden;
-    max-height: 400px;
-    max-width: 600px;
+    max-height: 200px;
+    min-width: 400px;
+
     transition: all 0.3s ease 0s;
     background-color: #000;
 }
@@ -376,5 +474,5 @@ body._lock {
     bottom: 30px;
 }
 .add {
-    background-color: red;
+    background-color: #ff7417;
 }
