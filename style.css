@@ -734,36 +734,71 @@ body._lock {
     min-height: 100vh;
 }
 .contacts__container {
-    padding: 30px 0;
+    padding: 30px 5px;
     background-color: rgb(95, 95, 95);
     border-radius: 50px;
     min-height: 80vh;
+    @media (max-width: 767.98px) {
+        padding: 20px 5px;
+    }
 }
 .contacts__title {
 }
 .title {
     margin-bottom: 100px;
+    @media (max-width: 767.98px) {
+        margin-bottom: 40px;
+    }
 }
 .contacts__subtitle {
     text-align: center;
     margin-bottom: 40px;
     font-size: 24px;
+    @media (max-width: 767.98px) {
+        margin-bottom: 20px;
+    }
 }
 .contacts__items {
     display: flex;
-    /* align-items: center; */
-    align-items: center;
+    margin: 0 auto;
     flex-direction: column;
+    gap: 30px;
+    max-width: 400px;
+    border: 2px solid #fda50f;
+    padding: 30px;
+    border-radius: 14px;
+}
+.contacts__social {
+    display: flex;
     gap: 20px;
 }
 .contacts__item {
     display: flex;
+    align-items: flex-start;
 }
 .contacts__icon {
+    position: relative;
+    transition: width 0.3s ease 0s;
 }
 
+.contacts__icon:after {
+    position: absolute;
+    content: "";
+    bottom: -9px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #fda50f;
+    transition: width 0.3s ease 0s;
+}
 .contacts__icon:hover {
-    text-decoration: underline;
+    color: #fda50f;
+    transition: width 0.3s ease 0s;
+}
+
+.contacts__icon:hover:after {
+    width: 100%;
+    transition: width 0.3s ease 0s;
 }
 
 .fa-solid {
@@ -776,10 +811,25 @@ body._lock {
 .fa-envelope {
     font-size: 22px;
 }
+
+.contacts__item:hover .fa-solid {
+    color: #fda50f;
+}
+
 .fa-linkedin {
     font-size: 52px;
+    transition: all 0.3s ease 0s;
+}
+.fa-linkedin:hover {
+    color: #fda50f;
+    transition: all 0.3s ease 0s;
+}
+.fa-github:hover {
+    color: #fda50f;
+    transition: all 0.3s ease 0s;
 }
 
 .fa-github {
     font-size: 52px;
+    transition: all 0.3s ease 0s;
 }
