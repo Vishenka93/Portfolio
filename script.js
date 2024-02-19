@@ -1,6 +1,16 @@
 const tabs = document.querySelectorAll(".tabs-tab");
 const contents = document.querySelectorAll(".swiper-slide");
 const bg = document.querySelectorAll(".skills__item");
+const burger = document.querySelector(".menu__icon"),
+    headerMenu = document.querySelector(".header__list");
+
+if (burger) {
+    burger.addEventListener("click", (event) => {
+        burger.classList.toggle("_active");
+        headerMenu.classList.toggle("_active");
+        document.body.classList.toggle("_lock");
+    });
+}
 
 // header
 window.addEventListener("scroll", function () {
@@ -22,22 +32,21 @@ for (let i = 0; i < bg.length; i++) {
 }
 //navigation
 
-document.querySelectorAll('a[href^="#"').forEach(link => {
-
-    link.addEventListener('click', function(e) {
+document.querySelectorAll('a[href^="#"').forEach((link) => {
+    link.addEventListener("click", function (e) {
         e.preventDefault();
 
-        let href = this.getAttribute('href').substring(1);
+        let href = this.getAttribute("href").substring(1);
 
         const scrollTarget = document.getElementById(href);
 
-        const topOffset = 70; 
+        const topOffset = 70;
         const elementPosition = scrollTarget.getBoundingClientRect().top;
         const offsetPosition = elementPosition - topOffset;
 
         window.scrollBy({
             top: offsetPosition,
-            behavior: 'smooth'
+            behavior: "smooth",
         });
     });
 });
@@ -62,6 +71,28 @@ const swiper = new Swiper(".content-swiper", {
     slidesPerView: 3,
     initialSlide: 0,
     spaceBetween: 20,
+
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        // when window width is >= 480px
+        480: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+        },
+        // when window width is >= 640px
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        },
+    },
 });
 
 //tabs
