@@ -2,7 +2,8 @@ const tabs = document.querySelectorAll(".tabs-tab");
 const contents = document.querySelectorAll(".swiper-slide");
 const bg = document.querySelectorAll(".skills__item");
 const burger = document.querySelector(".menu__icon"),
-    headerMenu = document.querySelector(".header__list");
+    headerMenu = document.querySelector(".header__list"),
+    headerLink = document.querySelectorAll(".header__link");
 
 if (burger) {
     burger.addEventListener("click", (event) => {
@@ -11,6 +12,13 @@ if (burger) {
         document.body.classList.toggle("_lock");
     });
 }
+
+headerLink.forEach((el) => {
+    el.addEventListener("click", (e) => {
+        headerMenu.classList.remove("_active");
+        burger.classList.toggle("_active");
+    });
+});
 
 // header
 window.addEventListener("scroll", function () {
@@ -27,7 +35,7 @@ for (let i = 0; i < bg.length; i++) {
         // let r = Math.random() * 22;
         // console.log(r);
         bg[i].style.transform =
-            "translate(-" + x * 40 + "px, -" + y * 40 + "px)";
+            "translate(-" + (x * (40 * i)) / 2 + "px, -" + y * 40 + "px)";
     });
 }
 //navigation
