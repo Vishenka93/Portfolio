@@ -16,7 +16,8 @@ if (burger) {
 headerLink.forEach((el) => {
     el.addEventListener("click", (e) => {
         headerMenu.classList.remove("_active");
-        burger.classList.toggle("_active");
+        burger.classList.remove("_active");
+        document.body.classList.remove("_lock");
     });
 });
 
