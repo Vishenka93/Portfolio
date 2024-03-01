@@ -69,7 +69,7 @@ body._lock {
 .title {
     text-align: center;
     font-size: 28px;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 7px;
     font-family: "Manrope";
     line-height: 24px;
@@ -548,34 +548,14 @@ body._lock {
     background-color: rgb(95, 95, 95);
     border-radius: 50px;
     min-height: 80vh;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .works__title {
     margin-bottom: 60px;
 }
 
-.tabs {
-    padding: 0 20px;
-    display: flex;
-}
-.tabs__navigation {
-    max-width: 350px;
-    padding: 10px 10px;
-    background-color: #fff;
-    border-radius: 15px;
-    margin-right: 10px;
-    display: flex;
-    flex-direction: column;
-    align-self: start;
-}
-
-.tabs-tab {
-    min-width: 100px;
-    margin-bottom: 5px;
-}
-
-.tab__content {
-}
 .content-swiper {
     width: 100%;
 }
@@ -586,9 +566,12 @@ body._lock {
 .content-swiper__slide {
     padding-bottom: 40px;
 }
+/* .swiper-slide {
+    height: 100%;
+} */
 
 .content-swiper__block {
-    min-height: 100%;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -635,19 +618,24 @@ body._lock {
     font-family: "Manrope";
     margin-bottom: 15px;
 }
-
+.content-swiper__body {
+    display: flex;
+    flex-direction: column;
+}
 .content-swiper__body p {
     margin-bottom: 20px;
     letter-spacing: 1px;
     line-height: 100%;
 }
-.content-swiper__body span {
-    font-weight: 700;
-    border: 1px solid grey;
-    padding: 2px 5px;
-    border-radius: 3px;
+.content-swiper__list {
+    margin-bottom: 10px;
 }
-
+.content-swiper__item:not(:last-child) {
+    margin-bottom: 10px;
+}
+.content-swiper__social {
+    align-items: end;
+}
 .content-swiper__body a:not(:last-child) {
     margin-right: 10px;
 }
@@ -774,7 +762,7 @@ body._lock {
 }
 
 .fa-linkedin {
-    font-size: 52px;
+    font-size: 32px;
     transition: all 0.3s ease 0s;
 }
 .fa-linkedin:hover {
@@ -787,6 +775,15 @@ body._lock {
 }
 
 .fa-github {
-    font-size: 52px;
+    font-size: 32px;
+    transition: all 0.3s ease 0s;
+}
+.fa-eye {
+    font-size: 32px;
+    transition: all 0.3s ease 0s;
+}
+
+.fa-eye:hover {
+    color: #fda50f;
     transition: all 0.3s ease 0s;
 }

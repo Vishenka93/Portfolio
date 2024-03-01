@@ -6,7 +6,7 @@ const burger = document.querySelector(".menu__icon"),
     headerLink = document.querySelectorAll(".header__link");
 
 if (burger) {
-    burger.addEventListener("click", (event) => {
+    burger.addEventListener("click", () => {
         burger.classList.toggle("_active");
         headerMenu.classList.toggle("_active");
         document.body.classList.toggle("_lock");
@@ -14,7 +14,7 @@ if (burger) {
 }
 
 headerLink.forEach((el) => {
-    el.addEventListener("click", (e) => {
+    el.addEventListener("click", () => {
         headerMenu.classList.remove("_active");
         burger.classList.remove("_active");
         document.body.classList.remove("_lock");
@@ -77,7 +77,7 @@ const swiper = new Swiper(".content-swiper", {
     //     sensitivity: 1,
     // },
 
-    slidesPerView: 3,
+    slidesPerView: 1,
     initialSlide: 0,
     spaceBetween: 20,
 
